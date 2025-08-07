@@ -1,9 +1,9 @@
 import { createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import { Route } from "react-router";
 import LoginPage from '../pages/Login/LoginPage.jsx';
-import { HomeLoader } from "../pages/Login/Home/HomeLoader.js";
-import HomeError from "../pages/Login/Home/HomeError.jsx";
-import HomePage from "../pages/Login/Home/HomePage.jsx";
+import { HomeLoader } from "../pages/Home/HomeLoader.js";
+import HomeError from "../pages/Home/HomeError.jsx";
+import HomePage from "../pages/Home/HomePage.jsx";
 import Landing from "../pages/Landing/Landing.jsx";
 
 const baseUrl = import.meta.env.VITE_REST_API_URL;
