@@ -62,3 +62,69 @@ const TaskLogger = () => {
 };
 
 export default TaskLogger;
+
+// styled components
+const Container = styled.div`
+  width: 90%;
+  max-width: 500px;
+  margin: 2rem auto;
+  border: 1px solid #a0b2cc;
+  padding: 1rem;
+  border-radius: 6px;
+  box-sizing: border-box;
+`;
+
+const TaskRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0.5rem;
+`;
+
+const Select = styled.select`
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 90px;
+  font-size: 0.85rem;
+`;
+
+const TimeInput = styled.input`
+  padding: 0.4rem;
+  width: 60px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+const AddButton = styled.button`
+  background-color: #4e8cff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+`;
+
+const NoteArea = styled.textarea`
+  width: 100%;
+  height: 120px;
+  margin: 1rem 0;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  border: 1px solid #a0b2cc;
+  border-radius: 4px;
+  resize: none;
+`;
+
+const SaveButton = styled.button`
+  width: 100%;
+  background-color: #4e8cff;
+  color: white;
+  font-size: 1rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+`;

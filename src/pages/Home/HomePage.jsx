@@ -9,6 +9,7 @@ import Header from "../../components/Header/Header";
 import Sidebar from "../../components/SideBar/Sidebar";
 import Main from "../../components/Main/Main";
 import CalendarComponent from "../../components/Calendar/CalendarComponent";
+import TaskLogger from "../../components/Project/TaskLogger";
 
 const HomePage = () => {
     return (
@@ -16,10 +17,9 @@ const HomePage = () => {
         <Header/>
         <BodyWrapper>
             <Sidebar/>
-            <Main element={<CalendarComponent/>}/>
-
+            {/* <Main element={<CalendarComponent/>}/> */}
+            <TaskLogger/>
         </BodyWrapper>
-        
         </>
   )
 }

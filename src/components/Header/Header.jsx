@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Header = () => {
     return (
         <HeaderWrapper>
-            sdaf
+            <h3>Workfit</h3>
         </HeaderWrapper>
     )
 }
