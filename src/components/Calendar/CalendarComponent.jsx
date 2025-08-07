@@ -3,10 +3,10 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 import interactionPlugin from "@fullcalendar/interaction" // needed for dayClick
 import timeGridPlugin from '@fullcalendar/timegrid';
-import ChangeViewBtn from "../../components/Calendar/ChangeViewBtn";
+import ChangeViewBtn from "./ChangeViewBtn";
 import styled from "styled-components";
 
-const Calendar = () => {
+const CalendarComponent = () => {
     const [showModal, setShowModal] = useState(false)
         const calendarRef = useRef(null);
         const [calendarApi, setCalendarApi] = useState(null);
@@ -115,7 +115,6 @@ const Calendar = () => {
 
     return (
         <>
-  
          <CalendarWrapper>
             <ChangeViewBtn calendarApi={calendarApi}/>
             <FullCalendar
@@ -155,4 +154,40 @@ const Calendar = () => {
     )
 }
 
-export default Calendar;
+export default CalendarComponent;
+
+const CalendarWrapper = styled.div`
+    margin: auto;
+    width: 80%;
+    height: 90vh;
+    overflow-y: auto;
+    /* 스크롤 바 숨기기 (크로스 브라우저) */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE, Edge */
+
+    //border: 2px solid black;
+
+`
+
+const Overlay = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* 매우 높은 값 */
+`
+
+const TestModal = styled.div`
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    min-width: 300px;
+    min-height: 150px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 10000; /* 더 위로 */
+`
