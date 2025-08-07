@@ -5,6 +5,9 @@ import interactionPlugin from "@fullcalendar/interaction" // needed for dayClick
 import timeGridPlugin from '@fullcalendar/timegrid';
 import styled from "styled-components";
 import ChangeViewBtn from "../../components/Calendar/ChangeViewBtn";
+import Header from "../../components/Header/Header";
+import Sidebar from "../../components/SideBar/Sidebar";
+import Main from "../../components/Main/Main";
 
 const HomePage = () => {
     const [showModal, setShowModal] = useState(false)
@@ -117,7 +120,14 @@ const HomePage = () => {
 
     return (
         <>
-        <CalendarWrapper>
+        <Header/>
+        <BodyWrapper>
+            <Sidebar/>
+            <Main element={(<div>hello gg</div>)}/>
+
+
+        </BodyWrapper>
+        {/* <CalendarWrapper>
             <ChangeViewBtn calendarApi={calendarApi}/>
             <FullCalendar
                 ref={calendarRef} // 🟢 ref 등록
@@ -150,10 +160,16 @@ const HomePage = () => {
                     
                 </TestModal>
             </Overlay>
-        )}
+        )} */}
         </>
   )
 }
+
+const BodyWrapper = styled.div`
+    display: flex;
+    flex: 1;
+    border: 1px solid black;
+`
 
 
 const CalendarWrapper = styled.div`
