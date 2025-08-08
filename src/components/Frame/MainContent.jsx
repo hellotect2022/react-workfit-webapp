@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Main = ({element}) => {
+const MainContent = ({element}) => {
     return (
         <MainWrapper>
             {element}
@@ -8,7 +8,7 @@ const Main = ({element}) => {
     )
 }
 
-export default Main;
+export default MainContent;
 
 const MainWrapper = styled.div`
     flex: 1;

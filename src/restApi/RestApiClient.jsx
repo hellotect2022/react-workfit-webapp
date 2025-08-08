@@ -11,4 +11,14 @@ export default class RestApiClient {
             throw error;
         }
     }
+
+    static async getProjectsTree() {
+        try {
+            const response = await AxisoWrapper.get('/projects');
+            return response;
+        } catch (error) {
+            console.error("Projects API Fail", error);
+            throw error;
+        }
+    }
 }
